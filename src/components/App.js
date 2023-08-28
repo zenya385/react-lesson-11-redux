@@ -18,13 +18,14 @@ export const App = () => {
   // Рендерим розмітку в залежності від значень у стані
   return (
     <Layout>
-      <div>
+      {/* <div>
         {isLoading && <p>Loading tasks...</p>}
         {error && <p>{error}</p>}
         <p>{items.length > 0 && JSON.stringify(items, null, 2)}</p>
-      </div>
+      </div> */}
       <AppBar />
       <TaskForm />
+      {isLoading && !error && <b>Request in progress...</b>}
       <TaskList />
     </Layout>
   );

@@ -6,10 +6,10 @@ import { deleteTask, toggleCompleted } from "components/redux/operations";
 export const Task = ({ task }) => {
   // Отримуємо посилання на функцію відправки екшенів
   const dispatch = useDispatch();
-  // Викликаємо генератор екшену та передаємо ідентифікатор завдання
   // Відправляємо результат - екшен видалення завдання
+  // Викликаємо генератор екшену та передаємо ідентифікатор завдання
   const handleDelete = () => dispatch(deleteTask(task.id));
-  const handleToggle = () => dispatch(toggleCompleted(task.id));
+  const handleToggle = () => dispatch(toggleCompleted(task));
   return (
     <div className={css.wrapper}>
       <input
